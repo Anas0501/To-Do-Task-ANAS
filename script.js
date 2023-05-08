@@ -22,19 +22,19 @@ function addTask(){
 }
 
 
-// this is to cheak and uncheak the task
+// this is to cheak and uncheak the task 
 listContainer.addEventListener("click", function(e){
-  if(e.target.tagname === "LI"){
+  if(e.target.tagName === "LI"){
     e.target.classList.toggle("checked");
-  }
-   else if (e.target.tagname === "SPAN"){
-    e.target.parentElemnet.remove();
+  } 
+   else if (e.target.tagName === "SPAN"){
+    e.target.parentNode.remove(); 
   }
 },false);
 
 
 // this is so that the browser saves the work which we have added
-function saveData(){
+function saveData(){ 
   localStorage.setItem("data",listContainer.innerHTML);
 }
 
